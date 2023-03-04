@@ -5,6 +5,8 @@ class HeapCheck:
         self.arr = arr
 
     def check(self):
+        
+        #checking if all the internal nodes are smaller than their children. Returns False if not.
         for i in range((len(self.arr)-2)//2+1):
             if self.arr[i*2+1]<self.arr[i] or self.arr[i*2+2]<self.arr[i]:
                 return False
